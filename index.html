@@ -13,6 +13,20 @@
   <script type="text/javascript" src="assets/davnet.js"></script>
 </head>
 <body onload="loadDavnet()">
+  <div id="SATDIV" class="SATDIV" style="display: none; padding: 15px;">
+    <blockquote style="border: 3px solid #ee9800;">
+      <div style="float: left; position: absolute;">
+        <a href="#" onclick="closeSat()">Close</a>
+      </div>
+      <div style="text-align: center; margin: auto;">
+        <input type="number" id="satid" value="25544"><button onclick="trackOn()">Query</button>
+      </div>
+      <img src="" style="border-radius: 50%;" id="type1"/><img src="" style="border-radius: 50%;" id="type2" /><br />
+      <img src="" style="border-radius: 10%;" id="type3" /><br />
+    </blockquote>
+
+
+  </div>
   <div style="margin: auto; text-align: center;">
     <img src="assets/davnet_144x144.png" style="border-radius: 50%;"/><br />
     <h1>DAVNET</h1>
@@ -26,6 +40,7 @@
     <span id="linksFill"></span><br />
     <div id="errorLine" style="color: #FF0000;"></div>
     <a href="otcb.html"><span style="font-family: devicons; font-size: 20px;">&#xe671;</span> Traffic Cameras in Ottawa</a><br />
+    <a href="#" onclick="trackSatellite()"><span style="font-family: devicons; font-size: 20px;">&#xe6a9;</span> Track Satellite by ID</a><br />
     <a onclick="searchFB('number')" href="#"><span style="font-family: devicons; font-weight: normal; font-style: normal; font-size: 20px;" >&#xe699;</span> Phone Number =&gt; Facebook</a><br />
     <a onclick="searchFB('email')" href="#"><span style="font-family: devicons; font-weight: normal; font-style: normal; font-size: 20px;" >&#xe699;</span> Email =&gt; facebook</a><br />
     <a href="assets/BIOSPW/index.html"><span style="font-family: devicons; font-size: 20px;">&#xe616;</span> BIOS Password Recovery</a><br />

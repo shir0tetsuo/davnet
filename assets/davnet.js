@@ -28,6 +28,30 @@ function searchFB(Mode) {
     }
   }
 }
+function trackSatellite() {
+  var sat = prompt("Satellite ID Number\n(Default: ISS)", "25544")
+  if (sat > 1) {
+    document.getElementById("SATDIV").style.display = "block"
+    document.getElementById("satid").value = sat;
+      trackOn()
+  } else {
+    errorLine.innerHTML = "Cancelled"
+  }
+}
+function closeSat() {
+  document.getElementById("SATDIV").style.display = "none"
+}
+
+function trackOn() {
+         var m = Math.random();
+         var x = document.getElementById("satid").value;
+         document.getElementById("type1").src = "http://www2.heavens-above.com/orbitdisplay.aspx?mat="+m+"&icon=iss&width=300&height=300&mode=N&satid="+x;
+         document.getElementById("type2").src = "http://www2.heavens-above.com/orbitdisplay.aspx?mat="+m+"&icon=default&width=300&height=300&mode=A&satid="+x;
+         document.getElementById("type3").src = "http://www2.heavens-above.com/orbitdisplay.aspx?mat="+m+"&icon=iss&width=600&height=300&mode=M&satid="+x;
+         setTimeout(() => {
+           trackOn()
+         }, 120000);
+}
 function loadDavnet() {
   document.getElementById("linksFill").innerHTML = Rand(briefIntroduction)
 }
