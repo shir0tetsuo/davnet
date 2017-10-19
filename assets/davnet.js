@@ -38,6 +38,15 @@ function trackSatellite() {
     errorLine.innerHTML = "Cancelled"
   }
 }
+function Magic() {
+  var magicNumber = prompt("Magic Number");
+  if (magicNumber == 4224) {
+    document.getElementById("4224").style.display = "block"
+    errorLine.innerHTML = "<b>Oh, wow, uh, how'd those get there?</b>"
+  } else {
+    errorLine.innerHTML = "Nope. I guess your skillz arent 133t."
+  }
+}
 function closeSat() {
   document.getElementById("SATDIV").style.display = "none"
 }
