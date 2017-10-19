@@ -5,7 +5,8 @@ const briefIntroduction = [
   'Some dandy links.',
   'Insert fancy stuff here.',
   'Do these even work?',
-  'Here\'s something for that boredom.'
+  'Here\'s something for that boredom.',
+  'A simple site with simple things.'
 ]
 
 function searchFB(Mode) {

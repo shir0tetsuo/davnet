@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+Learning some Javascript and making it cool.
+
+Written by Site Administrator.
+
+
+These are all publicly accessible. FYI.
+
+-->
+<title>OTCB</title>
+<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate, max-age=0">
+<style>
+body {
+	background-color: #000;
+	color: #FFF;
+	font-family: monospace;
+}
+#leftcol {
+	width: 49%;
+	height: 100%;
+	float: left;
+	border: 1px solid white;
+}
+#rightcol {
+	width: 49%;
+	height: 100%;
+	float: right;
+	border: 1px solid white;
+}
+#resetbox {
+	position: fixed;
+	right: 16%;
+	top: 12%;
+	width: 120px;
+	height: auto;
+	z-index: 8;
+	max-width: 20%;
+}
+a.button {
+	-webkit-appearance: button;
+	-moz-appearance: button;
+	appearance: button;
+}
+#redtag {
+	color: #F00;
+}
+#redtwo {
+	color: #990000;
+}
+#bluetag {
+	color: #00BFFF;
+}
+#bluetwo {
+	color: #0077b3;
+}
+#yellowtag {
+	color: #ff9900;
+}
+#yellowtwo {
+	color: #ffcc00;
+}
+#greentag {
+	color: #40ff00;
+}
+#ppltag {
+	color: #d11aff;
+}
+#lbtag {
+	color: #00ffcc;
+}
+#greentwo {
+	color: #33cc33;
+}
+#yellowtwo {
+	color: #ffff00;
+}
+#graytag {
+	color: #ff33ff;
+}
+#greenthree {
+	color: #00cc66;
+}
+#greenfour {
+	color: #bfff00;
+}
+#hidden {
+	display: none;
+}
+</style>
+</head>
+<body>
+
+<h1><a href="index.html">Home</a></h1>
+<h3 style="text-align: center;">Please specify Camera Number.</h3>
+<!-- LEFT SIDE -->
+<div id="leftcol">
+<h3>Dynamic Update</h3>
+<br>
+<!-- Enable for Static Images
+<a id="link">Track</a>
+-->
+<script>
+function drawCamera() {
+    var m = Math.random();
+    var x = document.getElementById("cameraNumber").value;
+  //  document.getElementById("link").href = "http://traffic.ottawa.ca/map/camera?id="+x;
+    document.getElementById("camera_one").src = "http://traffic.ottawa.ca/map/camera?id="+x+"&timems="+m;
+    setTimeout("drawCamera()", 500);
+}
+</script>
+<img src="" width="" height="" id="camera_one" style="position: relative; display: block; margin: 0 auto;"></img>
+</div>
+<!-- RIGHT SIDE -->
+<div id="rightcol">
+<h3>Static Update</h3>
+<br>
+<script>
+function drawCamera2() {
+    var m = Math.random();
+    var y = document.getElementById("cameraNumber2").value;
+    document.getElementById("camera_two").src = "http://traffic.ottawa.ca/map/camera?id="+y+"&timems="+m;
+ // setTimeout("drawCamera2()", 500);
+}
+function showdb() {
+	var div = document.getElementById("hidden");
+	if (div.style.display !== "none") {
+		div.style.display = "none";
+	}
+	else {
+		div.style.display = "block";
+	}
+}
+function showexp() {
+	var div = document.getElementById("hidden2");
+	if (div.style.display !== "none") {
+		div.style.display = "none";
+	}
+	else {
+		div.style.display = "block";
+	}
+}
+</script>
+<!-- It's a Secret -->
+<img src="" width="" height="" id="camera_two" style="position: relative; display: block; margin: 0 auto;"></img>
+</div>
+<div id="resetbox" style="border: 1px dashed white;">
+<a href="javascript:showexp()" style="color: #F00; background-color: #000;">Show/Hide Tools</a>
+<div id="hidden2">
+<input type="button" onClick="history.go(0)" VALUE="RESET"><br>
+<a href="http://traffic.ottawa.ca/map/"><input type="button" VALUE="UNLOCK"></a><br>
+<a href="javascript:showdb()"><input type="button" VALUE="DATABASE"></a>
+<div style="border: 1px solid white;">
+<input type="number" id="cameraNumber" value="132" style="width: 40%; position: relative; display: block; margin: 0 auto;">
+<button onclick="drawCamera()" style="position: relative; display: block; margin: 0 auto;">Dynamic</button>
+<input type="number" id="cameraNumber2" value="170" style="width: 40%; position; relative; display: block; margin: 0 auto;">
+<button onclick="drawCamera2()" style="position: relative; display: block; margin: 0 auto;">Static</button>
+</div>
+<a href="#top"><input type="button" VALUE="TOP"></a>
+</div>
+</div>
+<!--
+src: http://traffic.ottawa.ca/map/
+src: http://www.mto.gov.on.ca/english/traveller/compass/camera/ottawa-camhome1.shtml
+-->
+<br>
+<div id="hidden">
+<div id="leftcol">
+
+(2025) (MTO) <a id="ppltag">Hwy</a> 416 NB ramp to <a id="ppltag">Hwy</a> 417 East <br>
+(2005) (MTO) <a id="ppltag">Hwy</a> 417 between Holland Ave and Parkdale Ave <br>
+(2029) (MTO) <a id="ppltag">Hwy</a> 417 east of Eagleson Rd <br>
+(2026) (MTO) <a id="ppltag">Hwy</a> 417 east of Moodie Drive <br>
+(2016) (MTO) <a id="ppltag">Hwy</a> 417 near Aviation Parkway <br>
+(2037) (MTO) <a id="ppltag">Hwy</a> 417 near Bayswater Ave <br>
+(2019) (MTO) <a id="ppltag">Hwy</a> 417 Near Belfast Rd <br>
+(2023) (MTO) <a id="ppltag">Hwy</a> 417 near Bronson Ave <br>
+(2006) (MTO) <a id="ppltag">Hwy</a> 417 near <a id="redtag">Carling</a> Ave <br>
+(2034) (MTO) <a id="ppltag">Hwy</a> 417 near Carp Rd <br>
+(2007) (MTO) <a id="ppltag">Hwy</a> 417 near Churchill Ave <br>
+(2030) (MTO) <a id="ppltag">Hwy</a> 417 near Eagleson Rd <br>
+(2001) (MTO) <a id="ppltag">Hwy</a> 417 near <a id="ppltag">Hwy</a> 174 <br>
+(2035) (MTO) <a id="ppltag">Hwy</a> 417 near <a id="ppltag">Hwy</a> 7 <br>
+(2015) (MTO) <a id="ppltag">Hwy</a> 417 near Innes Rd <br>
+(2031) (MTO) <a id="ppltag">Hwy</a> 417 near Kanata Ave <br>
+(2021) (MTO) <a id="ppltag">Hwy</a> 417 near Lees Ave <br>
+(2027) (MTO) <a id="ppltag">Hwy</a> 417 near Moodie Drive <br>
+(2022) (MTO) <a id="ppltag">Hwy</a> 417 near O'Connor St <br>
+(2033) (MTO) <a id="ppltag">Hwy</a> 417 near Palladium Drive <br>
+(2009) (MTO) <a id="ppltag">Hwy</a> 417 near Pinecrest Rd <br>
+(2018) (MTO) <a id="ppltag">Hwy</a> 417 near St Laurent Blvd <br>
+(2032) (MTO) <a id="ppltag">Hwy</a> 417 near Terry Fox Drive <br>
+(2020) (MTO) <a id="ppltag">Hwy</a> 417 near Vanier Parkway <br>
+(2014) (MTO) <a id="ppltag">Hwy</a> 417 near Walkley Rd <br>
+(2008) (MTO) <a id="ppltag">Hwy</a> 417 near <a id="lbtag">Woodroffe</a> Ave <br>
+(2024) (MTO) <a id="ppltag">Hwy</a> 417 west of Holly Acres Rd <br>
+(2028) (MTO) <a id="ppltag">Hwy</a> 417 west of Moodie Drive <br>
+(2011) (MTO) South of <a id="ppltag">Hwy</a> 417 between <a id="ppltag">Hwy</a> 416 and Richmond Rd <br>
+(176) Airport Parkway &amp; Uplands <br>
+(43) Albert &amp; Booth <br>
+(41) Albert &amp; Lyon <br>
+(42) Albert &amp; O'Connor <br>
+(78) Albert &amp; <a id="greenthree">Preston</a> <br>
+(222) Albion &amp; Leitrim <br>
+(129) Albion &amp; Lester <br>
+(55) Alexander-Tache/Laurier &amp; Eddy <br>
+<a id="yellowtag">(170)</a> Algonquin &amp; <a id="lbtag">Woodroffe</a> <br>
+(194) Alta Vista &amp; Heron <br>
+(221) Alta Vista &amp; Industrial <br>
+(21) Altavista &amp; Smyth <br>
+(116) Aviation Parkway &amp; Ogilvie <br>
+(27) <a id="bluetag">Bank</a> &amp; Aylmer (Bank St. Bridge) <br>
+(104) <a id="bluetag">Bank</a> &amp; Catherine <br>
+(151) <a id="bluetag">Bank</a> &amp; Chamberlain <br>
+(189) <a id="bluetag">Bank</a> &amp; Fifth <br>
+(144) <a id="bluetag">Bank</a> &amp; Findlay Creek <br>
+(152) <a id="bluetag">Bank</a> &amp; First <br>
+(103) <a id="bluetag">Bank</a> &amp; Gladstone <br>
+(81) <a id="bluetag">Bank</a> &amp; Heron <br>
+(16) <a id="bluetag">Bank</a> &amp; <a id="greentwo">Hunt Club</a> <br>
+(123) <a id="bluetag">Bank</a> &amp; Laurier <br>
+(48) <a id="bluetag">Bank</a> &amp; Riverside <br>
+(64) <a id="bluetag">Bank</a> &amp; Somerset <br>
+(223) <a id="bluetag">Bank</a> &amp; Sunnyside <br>
+(5) <a id="bluetag">Bank</a> &amp; Walkley <br>
+(39) <a id="bluetag">Bank</a> &amp; Wellington <br>
+(99) Bankfield &amp; Prince of Wales <br>
+(59) <a id="yellowtag">Baseline</a> &amp; Clyde <br>
+(225) <a id="yellowtag">Baseline</a> &amp; Fisher <br>
+(1) <a id="yellowtag">Baseline</a> &amp; Greenbank <br>
+(52) <a id="yellowtag">Baseline</a> &amp; <a id="yellowtwo">Merivale</a> <br>
+(212) <a id="yellowtag">Baseline</a> &amp; Richmond <br>
+(2) <a id="yellowtag">Baseline</a> &amp; <a id="lbtag">Woodroffe</a> <br>
+(24) <a id="yellowtag">Baseline</a>/Heron &amp; Prince of Wales <br>
+(157) Bay &amp; Laurier <br>
+(112) Bay &amp; Slater <br>
+(180) Bay &amp; Wellington <br>
+(132) Bayshore &amp; <a id="redtag">Carling</a> <br>
+(60) Bayshore &amp; Richmond <br>
+(242) Bayview &amp; Scott <br>
+(100) Beechwood/St. Patrick &amp; Vanier <br>
+(8) Belfast &amp; St. Laurent <br>
+(118) Belfast &amp; Trainyards <br>
+(184) Besserer &amp; Waller <br>
+(6) Blair &amp; Innes <br>
+(73) Blair &amp; Ogilvie <br>
+(49) Booth &amp; Sir John A. Macdonald Parkway <br>
+(97) Booth &amp; Somerset <br>
+(214) Boteler &amp; Sussex <br>
+(98) Bridge &amp; Manotick Main <br>
+(136) Bridge/Mitch Owens &amp; River <br>
+(139) Bridle Path/Daze &amp; <a id="greentwo">Hunt Club</a> <br>
+(4) Bronson &amp; <a id="redtag">Carling</a> <br>
+(177) Bronson &amp; Catherine <br>
+(165) Bronson &amp; Gladstone <br>
+(85) Bronson &amp; Heron <br>
+(44) Bronson &amp; Laurier <br>
+(187) Bronson &amp; Somerset <br>
+(171) Bronson &amp; Sunnyside <br>
+(69) Brookfield/Hog's Back &amp; Riverside <br>
+(28) Campeau &amp; March <br>
+(126) Campeau &amp; Terry Fox <br>
+(160) <a id="redtag">Carling</a> &amp; Churchill <br>
+(62) <a id="redtag">Carling</a> &amp; Holland <br>
+(68) <a id="redtag">Carling</a> &amp; Kirkwood (North) <br>
+(158) <a id="redtag">Carling</a> &amp; Kirkwood (South) <br>
+(66) <a id="redtag">Carling</a> &amp; Maitland <br>
+(63) <a id="redtag">Carling</a> &amp; <a id="yellowtwo">Merivale</a> <br>
+(29) <a id="redtag">Carling</a> &amp; Pinecrest <br>
+(93) <a id="redtag">Carling</a> &amp; <a id="greenthree">Preston</a> <br>
+(149) <a id="redtag">Carling</a> &amp; Transitway <br>
+(67) <a id="redtag">Carling</a> &amp; <a id="lbtag">Woodroffe</a> <br>
+(125) Carp &amp; Hazeldean <br>
+(134) Carp &amp; <a id="ppltag">Highway</a> 417 <br>
+(192) Castlefrank &amp; Hazeldean <br>
+(179) Catherine &amp; Kent <br>
+(161) Catherine &amp; Metcalfe <br>
+(213) Catherine &amp; O'Connor <br>
+(88) Cedarview &amp; <a id="greentwo">Hunt Club</a> <br>
+(197) Champlain &amp; <a id="ppltag">Highway</a> 174 <br>
+(190) Chapel &amp; <a id="graytag">Rideau</a> <br>
+(94) Charlotte &amp; <a id="graytag">Rideau</a> <br>
+(124) Churchill &amp; Richmond <br>
+(241) Clegg &amp; Colonel By <br>
+(23) Conroy &amp; Walkley <br>
+(20) Corkstown &amp; Moodie <br>
+(57) Coventry/Ogilvie &amp; St. Laurent <br>
+(206) Cumberland &amp; Laurier <br>
+(96) Cumberland &amp; Murray <br>
+(147) Cummings &amp; Ogilvie <br>
+(146) Cyrville &amp; Innes <br>
+(185) Dalhousie &amp; Murray <br>
+<a id="yellowtag">(107)</a> Dalhousie &amp; <a id="graytag">Rideau</a> <br>
+(195) Donald &amp; St. Laurent <br>
+(3) Eagleson &amp; Hazeldean/Robertson <br>
+(178) Eagleson &amp; Katimavik/Timm <br>
+(191) Eagleson &amp; Michael Cowpland/Stonehaven <br>
+(142) Earl Armstrong &amp; Limebank <br>
+(143) Earl Armstrong &amp; River <br>
+(110) Earl Grey &amp; Kanata  <br>
+(216) Elgin &amp; Gladstone <br>
+(35) Elgin &amp; Laurier <br>
+(54) Elgin &amp; Pretoria/Queen Elizabeth <br>
+(34) Elgin &amp; Queen <br>
+(61) Fallowfield &amp; Greenbank <br>
+(15) Fallowfield &amp; <a id="yellowtwo">Merivale</a> <br>
+(226) Fallowfield &amp; Prince of Wales <br>
+(148) Fallowfield &amp; Transitway <br>
+(9) Fallowfield &amp; <a id="lbtag">Woodroffe</a> <br>
+(21) Fifth and Queens Elizabeth Driveway <br>
+(167) Fisher &amp; Meadowlands <br>
+(223) Foxfield &amp; Greenbank <br>
+(153) Gilligan &amp; Leitrim <br>
+(101) Gladstone &amp; <a id="greenthree">Preston</a> <br>
+(74) Greenbank &amp; Berrigan/Wessex <br>
+(90) Greenbank &amp; <a id="greentwo">Hunt Club</a> <br>
+(150) Greenbank &amp; Iris <br>
+(120) Greenbank &amp; <a id="redtwo">Strandherd</a> <br>
+(228) Greenfield &amp; Main <br>
+(117) Hawthorne &amp; <a id="greentwo">Hunt Club</a> <br>
+(229) Hawthorne &amp; Main <br>
+(127) Hazeldean &amp; Huntmar <br>
+(119) Hazeldean &amp; Stittsville Main <br>
+(32) Hazeldean &amp; Terry Fox <br>
+(193) Heron &amp; Riverside <br>
+(145) <a id="ppltag">Highway</a> 174 &amp; Cameron <br>
+(198) <a id="ppltag">Highway</a> 174 &amp; Jeanne D'Arc <br>
+(72) <a id="ppltag">Highway</a> 174 &amp; Trim <br>
+(234) <a id="ppltag">Highway</a> 174 (East) at Blair <br>
+(200) <a id="ppltag">Highway</a> 174 east of Blair <br>
+(199) <a id="ppltag">Highway</a> 174 east of <a id="bluetwo">Montreal</a> <br>
+(201) <a id="ppltag">Highway</a> 174 west of Blair <br>
+(45) <a id="ppltag">Highway</a> 417 &amp; Kanata <br>
+(70) <a id="ppltag">Highway</a> 417 &amp; Pinecrest <br>
+(80) <a id="ppltag">Highway</a> 417 &amp; Vanier <br>
+(181) <a id="ppltag">Highway</a> 417 &amp; <a id="lbtag">Woodroffe</a> <br>
+(30) <a id="ppltag">Highway</a> 417 (East) &amp; Innes <br>
+(164) <a id="ppltag">Highway</a> 417 (East) &amp; Maitland <br>
+(238) <a id="ppltag">Highway</a> 417 (East) &amp; St Laurent <br>
+(237) <a id="ppltag">Highway</a> 417 (West) &amp; Innes <br>
+(186) <a id="ppltag">Highway</a> 417 (West) &amp; Maitland <br>
+(114) Holland &amp; Scott <br>
+(182) Holland &amp; Wellington <br>
+(89) Holly Acres/Nanaimo &amp; Richmond <br>
+(17) <a id="greentwo">Hunt Club</a> &amp; Airport Parkway <br>
+(156) <a id="greentwo">Hunt Club</a> &amp; Knoxdale <br>
+(203) <a id="greentwo">Hunt Club</a> &amp; Lowes <br>
+(22) <a id="greentwo">Hunt Club</a> &amp; <a id="yellowtwo">Merivale</a> <br>
+(11) <a id="greentwo">Hunt Club</a> &amp; Prince of Wales <br>
+(19) <a id="greentwo">Hunt Club</a> &amp; Riverside <br>
+(219) <a id="greentwo">Hunt Club</a> &amp; Uplands <br>
+(12) <a id="greentwo">Hunt Club</a> &amp; <a id="lbtag">Woodroffe</a> <br>
+(131) Industrial &amp; Riverside <br>
+(204) Industrial &amp; Trainyards <br>
+(208) Innes &amp; Bearbrook <br>
+(215) Innes &amp; Blackburn Hamlet Bypass <br>
+(82) Innes &amp; Jeanne D'Arc <br>
+(71) Innes &amp; <a id="greenfour">Orleans</a> <br>
+(77) Innes &amp; Tenth Line  <br>
+(14) Innes/Industrial &amp; St. Laurent <br>
+(84) Iris &amp; <a id="lbtag">Woodroffe</a> <br>
+(162) Isabella &amp; Metcalfe <br>
+(113) Island Park &amp; Scott <br>
+(47) Island Park &amp; Sir John A. Macdonald Parkway <br>
+(135) Jeanne D'Arc &amp; St Joseph <br>
+(53) Katimavik/Palladium &amp; Terry Fox <br>
+(217) Kent &amp; Queen <br>
+(46) Kent &amp; Slater <br>
+(95) <a id="yellowtwo">King Edward</a> &amp; Laurier <br>
+(130) <a id="yellowtwo">King Edward</a> &amp; Mann <br>
+(38) <a id="yellowtwo">King Edward</a> &amp; <a id="graytag">Rideau</a> <br>
+(65) <a id="yellowtwo">King Edward</a> &amp; St. Patrick <br>
+(51) <a id="yellowtwo">King Edward</a> &amp; Sussex <br>
+(31) Kirkwood &amp; Richmond <br>
+(138) Klondike &amp; March <br>
+(18) Knoxdale &amp; <a id="lbtag">Woodroffe</a> <br>
+(188) Lansdowne <br>
+(36) Laurier &amp; Nicholas <br>
+(163) Laurier &amp; O'Connor <br>
+(202) Laurier &amp; Transitway <br>
+(91) Leitrim &amp; Limebank <br>
+(236) Lemieux &amp; St Laurent <br>
+(86) Limebank &amp; River <br>
+<a id="yellowtag">(108)</a> Lincoln Fields Station &amp; Sir John A. Macdonald Parkway <br>
+(79) Longfields &amp; <a id="redtwo">Strandherd</a> <br>
+(37) Mackenzie &amp; Waller <br>
+(211) Main &amp; Lees <br>
+(230) Main &amp; Riverdale <br>
+(140) March &amp; Maxwell Bridge/Old Carp <br>
+(137) March &amp; Terry Fox <br>
+(92) Meadowlands &amp; <a id="yellowtwo">Merivale</a> <br>
+(105) Meadowlands/Hog's Back &amp; Prince of Wales <br>
+(25) Meadowlands/Tallwood &amp; <a id="lbtag">Woodroffe</a> <br>
+(155) <a id="yellowtwo">Merivale</a> &amp; Slack <br>
+(166) <a id="yellowtwo">Merivale</a> &amp; Viewmount <br>
+(13) Metcalfe &amp; Slater <br>
+(58) Metcalfe &amp; Wellington <br>
+(210) <a id="bluetwo">Montreal</a> &amp; Aviation <br>
+(205) <a id="bluetwo">Montreal</a> &amp; Blair <br>
+(141) <a id="bluetwo">Montreal</a> &amp; Ogilvie <br>
+(183) <a id="bluetwo">Montreal</a> &amp; Shefford <br>
+(7) <a id="bluetwo">Montreal</a> &amp; St. Laurent <br>
+(174) <a id="bluetwo">Montreal</a> &amp; Vanier <br>
+(83) Moodie &amp; Robertson <br>
+(10) <a id="greenfour">Orleans</a> &amp; St. Joseph <br>
+(243) Parkdale &amp; Scott <br>
+(109) Parkdale &amp; Wellington  <br>
+(128) Parkdale &amp; Westmount <br>
+(173) Pinecrest &amp; Richmond <br>
+(196) Place d'<a id="greenfour">Orleans</a> &amp; St. Joseph <br>
+(169) <a id="greenthree">Preston</a> &amp; Somerset <br>
+(159) Prince of Wales &amp; <a id="redtwo">Strandherd</a> <br>
+(102) Richmond &amp; <a id="lbtag">Woodroffe</a> <br>
+(33) <a id="graytag">Rideau</a> &amp; Sussex <br>
+(122) Riocan &amp; <a id="redtwo">Strandherd</a> <br>
+(172) Riverside &amp; Tremblay <br>
+(106) Riverside &amp; Walkley <br>
+(26) Russell &amp; Walkley <br>
+(121) Sheffield &amp; Walkley <br>
+(232) Sir John A. Macdonald Parkway &amp; Vimy <br>
+(40) Sir John A. Macdonald Parkway/Wellington &amp; Portage Bridge <br>
+(154) Slack &amp; <a id="lbtag">Woodroffe</a> <br>
+(209) Smyth &amp; Hospital <br>
+(168) Smyth &amp; St. Laurent <br>
+(220) St. Laurent &amp; Walkley <br>
+(75) <a id="redtwo">Strandherd</a> &amp; <a id="lbtag">Woodroffe</a> <br>
+(87) Transitway &amp; Walkley <br>
+<a href="http://www.tpsgc-pwgsc.gc.ca/citeparlementaire-parliamentaryprecinct/newhillcam.jpg" style="color: #F00;">Parliament Hill Cam</a>
+</div>
+
+</div>
+</body>
+</html>
