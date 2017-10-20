@@ -318,7 +318,7 @@ function fetchCamera() {
   } else if (x >= 2038) {
     ELINE2.innerHTML = `You have reached the end.`
   } else {
-    ELINE2.innerHTML = 'Nothing here.';
+    ELINE2.innerHTML = 'Nothing here / Pending.';
   }
   document.getElementById("cameraOne").src = `http://traffic.ottawa.ca/map/camera?id=${x}&timems=${m}`
   setTimeout(() => {
