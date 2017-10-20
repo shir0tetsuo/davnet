@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate, max-age=0">
   <!-- http://vorillaz.github.io/devicons/#/dafont -->
   <title>DAVNET Home</title>
   <link rel="stylesheet" href="assets/davnet.css" />
   <link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
-  <link rel="shortcut icon" href="assets/davnet.ico" type="image/x-icon" >
-  <link rel="icon" href="assets/davnet_32x32.png" sizes="32x32" >
-  <link rel="icon" href="assets/davnet_48x48.png" sizes="48x48" >
-  <link rel="icon" href="assets/davnet_96x96.png" sizes="96x96" >
-  <link rel="icon" href="assets/davnet_144x144.png" sizes="144x144" >
+  <link rel="shortcut icon" href="assets/davnet.ico" type="image/x-icon">
+  <link rel="icon" href="assets/davnet_32x32.png" sizes="32x32">
+  <link rel="icon" href="assets/davnet_48x48.png" sizes="48x48">
+  <link rel="icon" href="assets/davnet_96x96.png" sizes="96x96">
+  <link rel="icon" href="assets/davnet_144x144.png" sizes="144x144">
   <script type="text/javascript" src="assets/davnet.js"></script>
 </head>
+
 <body onload="loadDavnet()">
   <div id="SATDIV" class="SATDIV" style="display: none; padding: 15px; z-index: 2;">
     <blockquote style="border: 3px solid #ee9800;">
@@ -21,16 +24,32 @@
       <div style="text-align: center; margin: auto;">
         <input type="number" id="satid" value="25544"><button onclick="trackOn()">Query</button>
       </div>
-      <img src="" style="border-radius: 50%;" id="type1"/><img src="" style="border-radius: 50%;" id="type2" /><br />
+      <img src="" style="border-radius: 50%;" id="type1" /><img src="" style="border-radius: 50%;" id="type2" /><br />
       <img src="" style="border-radius: 10%;" id="type3" /><br />
     </blockquote>
 
 
   </div>
+  <div id="CameraArea" class="CameraDIV" style="display: none; padding: 10px; z-index: 3;">
+    <div style="float: left; position: absolute; z-index: 4;">
+      <div class="CameraControls">
+        <a href="#" onclick="closeCam()">Close</a><br />
+        <a href="#" onclick="history.go(0)">Refresh</a><br /><br />
+        <input type="number" id="cameraNumber" value="132" style="width: 95px; display: block; margin: 0 auto;">
+        <button onclick="fetchCamera()" style="position: relative; display: block; margin: 0 auto;">Dynamic</button>
+      </div>
+      <div style="margin: auto; text-align: center; position: relative;">
+        <img src="" width="" height="" id="cameraOne" style="position: relative; display: block; margin: 0 auto;"></img>
+        <div style="position: absolute; top: 95%; left: 50%; transform: translate(-50%, -50%);">
+          <span id="ELINE2"></span>
+        </div>
+      </div>
+    </div>
+  </div>
   <div style="margin: auto; text-align: center; position: relative;">
-    <img src="assets/davnet_144x144.png" style="border-radius: 50%;"/><br />
+    <img src="assets/davnet_144x144.png" style="border-radius: 50%;" /><br />
     <div style="position: absolute; top: 90%; left: 50%; transform: translate(-50%, -50%);">
-          <h1 style="color: #ee9800;">DAVNET</h1>
+      <h1 style="color: #ee9800;">DAVNET</h1>
     </div>
   </div>
   <blockquote>
@@ -42,7 +61,7 @@
   <blockquote>
     <span id="linksFill"></span><br />
     <div id="errorLine" style="color: #FF0000;"></div>
-    <a href="otcb.html"><span style="font-family: devicons; font-size: 20px;">&#xe671;</span> Traffic Cameras in Ottawa</a><br />
+    <!--<a href="otcb.html">--><a href="#" onclick="showCam()"><span style="font-family: devicons; font-size: 20px;">&#xe671;</span> Traffic Cameras in Ottawa</a><br />
     <a href="#" onclick="Magic()"><span style="font-family: devicons; font-size: 20px;">&#xe671;</span> Uber Secret</a><br />
     <a href="#" onclick="trackSatellite()"><span style="font-family: devicons; font-size: 20px;">&#xe6a9;</span> Track Satellite by ID</a><br />
     <a onclick="searchFB('number')" href="#"><span style="font-family: devicons; font-weight: normal; font-style: normal; font-size: 20px;" >&#xe699;</span> Phone Number =&gt; Facebook</a><br />
@@ -59,5 +78,8 @@
     <a href="https://twitter.com/">Twitter</a><br />
     <a href="https://duckduckgo.com.">DuckDuckGo</a>
   </blockquote>
+  <!-- Meta -->
+  <iframe id="badbox" src="" height="0px" width="0px" style="display: none;"></iframe>
 </body>
+
 </html>
