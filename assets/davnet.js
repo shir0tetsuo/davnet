@@ -315,6 +315,108 @@ function fetchCamera() {
     ELINE2.innerHTML = `Elgin &amp; Laurier`
   } else if (x == 54) {
     ELINE2.innerHTML = `Elgin &amp; Pretoria/Queen Elizabeth`
+  } else if (x == 34) {
+    ELINE2.innerHTML = `Elgin &amp; Queen`
+  } else if (x == 61) {
+    ELINE2.innerHTML = `Fallowfield &amp; Greenbank`
+  } else if (x == 15) {
+    ELINE2.innerHTML = `Fallowfield &amp; Merivale`
+  } else if (x == 226) {
+    ELINE2.innerHTML = `Fallowfield &amp; Prince of Wales`
+  } else if (x == 148) {
+    ELINE2.innerHTML = `Fallowfield &amp; Transitway`
+  } else if (x == 9) {
+    ELINE2.innerHTML = `Fallowfield &amp; Woodroffe`
+  } else if (x == 21) {
+    ELINE2.innerHTML = `Fifth &amp; Queen Elizabeth Driveway`
+  } else if (x == 167) {
+    ELINE2.innerHTML = `Fisher &amp; Meadowlands`
+  } else if (x == 223) {
+    ELINE2.innerHTML = `Foxfield &amp; Greenbank`
+  } else if (x == 153) {
+    ELINE2.innerHTML = `Gilligan &amp; Leitrim`
+  } else if (x == 101) {
+    ELINE2.innerHTML = `Gladstone &amp; Preston`
+  } else if (x == 74) {
+    ELINE2.innerHTML = `Greenbank &amp; Berrigan/Wessex`
+  } else if (x == 90) {
+    ELINE2.innerHTML = `Greenbank &amp; Hunt Club`
+  } else if (x == 150) {
+    ELINE2.innerHTML = `Greenbank &amp; Iris`
+  } else if (x == 120) {
+    ELINE2.innerHTML = `Greenbank &amp; Strandherd`
+  } else if (x == 228) {
+    ELINE2.innerHTML = `Greenfield &amp; Main`
+  } else if (x == 117) {
+    ELINE2.innerHTML = `Hawthorne &amp; Hunt Club`
+  } else if (x == 229) {
+    ELINE2.innerHTML = `Hawthorne &amp; Main`
+  } else if (x == 127) {
+    ELINE2.innerHTML = `Hazeldean &amp; Huntmar`
+  } else if (x == 119) {
+    ELINE2.innerHTML = `Hazeldean &amp; Stittsville Main`
+  } else if (x == 32) {
+    ELINE2.innerHTML = `Hazeldean &amp; Terry Fox`
+  } else if (x == 193) {
+    ELINE2.innerHTML = `Heron &amp; Riverside`
+  } else if (x == 145) {
+    ELINE2.innerHTML = `Hwy 174 &amp; Cameron`
+  } else if (x == 198) {
+    ELINE2.innerHTML = `Hwy 174 &amp; Jeanne D'Arc`
+  } else if (x == 72) {
+    ELINE2.innerHTML = `Hwy 174 &amp; Trim`
+  } else if (x == 234) {
+    ELINE2.innerHTML = `Hwy 174 (East) at Blair`
+  } else if (x == 200) {
+    ELINE2.innerHTML = `Hwy 174 East of Blair`
+  } else if (x == 199) {
+    ELINE2.innerHTML = `Hwy 174 East of Montreal`
+  } else if (x == 201) {
+    ELINE2.innerHTML = `Hwy 174 West of Blair`
+  } else if (x == 45) {
+    ELINE2.innerHTML = `Hwy 417 &amp; Kanata`
+  } else if (x == 70) {
+    ELINE2.innerHTML = `Hwy 417 &amp; Pinecrest`
+  } else if (x == 80) {
+    ELINE2.innerHTML = `Hwy 417 &amp; Vanier`
+  } else if (x == 181) {
+    ELINE2.innerHTML = `Hwy 417 &amp; Woodroffe`
+  } else if (x == 30) {
+    ELINE2.innerHTML = `Hwy 417 (East) &amp; Innes`
+  } else if (x == 164) {
+    ELINE2.innerHTML = `Hwy 417 (East) &amp; Maitland`
+  } else if (x == 238) {
+    ELINE2.innerHTML = `Hwy 417 (East) &amp; St. Laurent`
+  } else if (x == 237) {
+    ELINE2.innerHTML = `Hwy 417 (West) &amp; Innes`
+  } else if (x == 186) {
+    ELINE2.innerHTML = `Hwy 417 (West) &amp; Maitland`
+  } else if (x == 114) {
+    ELINE2.innerHTML = `Holland &amp; Scott`
+  } else if (x == 182) {
+    ELINE2.innerHTML = `Holland &amp; Wellington`
+  } else if (x == 89) {
+    ELINE2.innerHTML = `Holly Acres/Nanaimo &amp; Richmond`
+  } else if (x == 17) {
+    ELINE2.innerHTML = `Hunt Club &amp; Airport Parkway`
+  } else if (x == 156) {
+    ELINE2.innerHTML = `Hunt Club &amp; Knoxdale`
+  } else if (x == 203) {
+    ELINE2.innerHTML = `Hunt Club &amp; Lowes`
+  } else if (x == 22) {
+    ELINE2.innerHTML = `Hunt Club &amp; Merivale`
+  } else if (x == 11) {
+    ELINE2.innerHTML = `Hunt Club &amp; Prince of Wales`
+  } else if (x == 19) {
+    ELINE2.innerHTML = `Hunt Club &amp; Riverside`
+  } else if (x == 219) {
+    ELINE2.innerHTML = `Hunt Club &amp; Uplands`
+  } else if (x == 12) {
+    ELINE2.innerHTML = `Hunt Club &amp; Woodroffe`
+  } else if (x == 131) {
+    ELINE2.innerHTML = `Industrial &amp; Riverside`
+  } else if (x == 204) {
+    ELINE2.innerHTML = `Industrial &amp; Trainyards`
   } else if (x >= 2038) {
     ELINE2.innerHTML = `You have reached the end.`
   } else {
